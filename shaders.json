@@ -10,7 +10,7 @@
 				"name": "ScreenSize",
 				"format": "vec2",
 				"default": [1920, 1080],
-				"description": "The size of the screen you want to be playing at. Check this using the F3 screen, should look like \"Display: <width> x <height>\"."
+				"description": "The size of the screen you want to be playing at. Check this using the F3 screen, it should say something like \"Display: <width> x <height>\". Write these values below."
 			}
 		]
 	}
