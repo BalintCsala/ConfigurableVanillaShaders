@@ -2,7 +2,7 @@
 	{
 		"url": "https://github.com/BalintCsala/Minificent",
 		"name": "Minificent",
-		"description": "Adds colored lights to the shader. They interact with stained glass.",
+		"description": "Adds colored lights to the game. They interact with stained glass.",
 		"thumbnail": "https://github.com/BalintCsala/Minificent/raw/main/pack.png",
 		"settings": [
 			{
