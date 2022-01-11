@@ -8,6 +8,7 @@
 			{
 				"type": "uniform",
 				"name": "ScreenSize",
+				"displayName": "Screen size",
 				"format": "vec2",
 				"defaultValue": [1920, 1080],
 				"description": "The size of the screen you want to be playing at. Check this using the F3 screen, it should say something like \"Display: <width> x <height>\". Write these values below."
