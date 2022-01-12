@@ -15,6 +15,11 @@ The main contributor(s) can decline a PR if it doesn't follow the standards:
 5. No profanity or otherwise controversial content. Breaking this in a serious way (gore, porn, Nazi symbols, etc.) will result in a complete ban from the system.
 6. Don't make the descriptions overly long to keep them from taking up a whole page.
 
+## Testing a shaders.json file
+
+Go to the website and click on the wrench icon at the top, then confirm that you want to view developer mode. A new button will show up on the bottom right of the page 
+letting you upload shader.json files. Please test them before you open a PR.
+
 ## Shaders.json format
 
 This documentation won't go over the JSON format, for that please refer to a [different site](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON).
