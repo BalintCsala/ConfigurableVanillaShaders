@@ -152,9 +152,12 @@ Example:
 
 The shaders will get the value of the selected option as a float.
 
-## Opening PR
+## Opening a PR
 
-Fork the this repository first, edit the shaders.json file and then open a pull request.
+Fork the this repository first and edit the shaders.json file. Make sure to test it on the site (by enabling developer mode) first. If it doesn't work as intended, press 
+F12 to bring up the developer console to see if it has any insights.
+
+After testing, push the changes and open a PR comparing your branch with this one.
 
 ### When adding a new shader
 
