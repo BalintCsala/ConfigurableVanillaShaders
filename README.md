@@ -54,7 +54,10 @@ Each setting is a JSON object with the following properties:
                 "format": "<The format of the setting, more below, (enum | float | vec2 | vec3 | vec4 | int | bool)>",
                 "defaultValue": "<The default value of the setting>",
                 "enumValues": "<Only for enums, see 'Enum'>",
-                "description": "<The description of the setting>"
+                "description": "<The description of the setting>",
+                "min": "<Optional, only applicable to some formats, the minimum value the setting can reach>",
+                "max": "<Optional, only applicable to some formats, the maximum value the setting can reach>",
+                "step": "<Optional, only applicable to some formats, the difference between each subsequent value the setting can be>"
             }
 ```
 (The indentation is intentional)
@@ -102,13 +105,30 @@ These are similar to Optifine's options system. They are also defined inside the
 
 The following formats are supported:
 
-#### Float, int
+#### Float
 
-The `defaultValue` field must be a JSON number
+The `defaultValue` field must be a JSON number.
+
+Three additional options are available when defining a float input `min`, `max` and `step`:
+- `min` controls the minimum value the output can reach.
+- `max` controls the maximum value the output can reach.
+- `step` controls the distance between two values. This is counted from the minimum value (or 0 if it isn't defined) and it will be enforced. E.g. if `min` is 1, `step` is 0.5 and the user enters the value 1.45, then it will be rounded to 1.5.
+
+#### Int
+
+The `defaultValue` field must be a JSON number.
+
+Two additional options are available when defining an integer input `min` and `max`:
+- `min` controls the minimum value the output can reach.
+- `max` controls the maximum value the output can reach.
 
 #### Vec2, vec3, vec4
 
 The `defaultValue` field must be an array with as many entries as the dimensions of the vector
+
+Two additional options are available when defining an integer input `min` and `max`. These are done component-wise:
+- `min` controls the minimum value the output can reach. Must be a JSON array containing as many numbers as the vector has components.
+- `max` controls the maximum value the output can reach. Must be a JSON array containing as many numbers as the vector has components.
 
 #### Bool
 
@@ -132,9 +152,12 @@ Example:
 
 The shaders will get the value of the selected option as a float.
 
-## Opening PR
+## Opening a PR
 
-Fork the this repository first, edit the shaders.json file and then open a pull request.
+Fork the this repository first and edit the shaders.json file. Make sure to test it on the site (by enabling developer mode) first. If it doesn't work as intended, press 
+F12 to bring up the developer console to see if it has any insights.
+
+After testing, push the changes and open a PR comparing your branch with this one.
 
 ### When adding a new shader
 
