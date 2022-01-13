@@ -114,7 +114,7 @@ Three additional options are available when defining a float input `min`, `max` 
 - `max` controls the maximum value the output can reach.
 - `step` controls the distance between two values. This is counted from the minimum value (or 0 if it isn't defined) and it will be enforced. E.g. if `min` is 1, `step` is 0.5 and the user enters the value 1.45, then it will be rounded to 1.5.
 
-### Int
+#### Int
 
 The `defaultValue` field must be a JSON number.
 
