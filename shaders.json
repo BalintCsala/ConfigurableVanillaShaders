@@ -1,4 +1,4 @@
-[	
+[    
     {
         "url": "https://github.com/BalintCsala/Minificent",
         "name": "Minificent",
@@ -35,30 +35,30 @@
             }
         ]
     },
-	{
-		"url": "https://github.com/BalintCsala/HangingLanterns",
-		"name": "Hanging Lanterns",
-		"creator": "Bálint",
-		"creatorLink": "https://github.com/BalintCsala",
-		"description": "Makes lanterns sway around",
-		"thumbnail": "https://github.com/BalintCsala/HangingLanterns/raw/main/pack.png",
-		"settings": [
-			{
-				"type": "constant",
-				"name": "SWAYING_MULTIPLIER",
-				"displayName": "Swaying speed",
-				"format": "float",
-				"defaultValue": 1,
-				"description": "The speed the lanterns are swaying at. This is a multiplier on the default value."
-			},
-			{
-				"type": "constant",
-				"name": "SWAYING_AMOUNT_MULTIPLIER",
-				"displayName": "Swaying amount",
-				"format": "float",
-				"defaultValue": 1,
-				"description": "The amount the lamps sway from side to side. Larger values will result in larger offsets. Doesn't affect the speed."
-			}
-		]
-	}
+    {
+        "url": "https://github.com/BalintCsala/HangingLanterns",
+        "name": "Hanging Lanterns",
+        "creator": "Bálint",
+        "creatorLink": "https://github.com/BalintCsala",
+        "description": "Makes lanterns sway around",
+        "thumbnail": "https://github.com/BalintCsala/HangingLanterns/raw/main/pack.png",
+        "settings": [
+            {
+                "type": "constant",
+                "name": "SWAYING_MULTIPLIER",
+                "displayName": "Swaying speed",
+                "format": "float",
+                "defaultValue": 1,
+                "description": "The speed the lanterns are swaying at. This is a multiplier on the default value."
+            },
+            {
+                "type": "constant",
+                "name": "SWAYING_AMOUNT_MULTIPLIER",
+                "displayName": "Swaying amount",
+                "format": "float",
+                "defaultValue": 1,
+                "description": "The amount the lamps sway from side to side. Larger values will result in larger offsets. Doesn't affect the speed."
+            }
+        ]
+    }
 ]
