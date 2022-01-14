@@ -32,6 +32,7 @@ The file is a JSON array containing the descriptions of the shaders. Each of tho
         "link": "<Optional, if present, the link button will lead here, otherwise url will be used. Must include this if url points to a zip file>",
         "name": "<Name of the shader>",
         "description": "<The description of the shader>",
+		"longDescription": "<Optional, a longer version of the description. This is only displayed on the edit page. If you write \\n anywhere (double "\"!) it will add a new line>",
         "creator": "<Username of the creator>",
         "creatorLink": "<Optional, whatever you want your name to link to, e.g. GitHub profile page, website, CurseForge page, etc.>",
         "thumbnail": "<Optional, link to the image you want to be displayed next to the shader on the main page, preferably the pack.png>",
