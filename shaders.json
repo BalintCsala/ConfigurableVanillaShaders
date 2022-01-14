@@ -23,7 +23,7 @@
 				"displayName": "Smooth lighting",
 				"format": "bool",
 				"defaultValue": true,
-				"description": "Enables smooth lighting, akin to the similarly names option in the vanilla light system. Affects performance quite a bit, if you have trouble running the shader at acceptable framerates, try turning this off."
+				"description": "Enables smooth lighting, akin to the similarly named option in the vanilla light system. Affects performance quite a bit, if you have trouble running the shader at acceptable framerates, try turning this off."
 			}
         ]
     },
