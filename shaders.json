@@ -17,14 +17,22 @@
                 "min": [640, 480],
                 "description": "The size of the screen you want to be playing at. Check this using the F3 screen, it should say something like \"Display: <width> x <height>\". Write these values below."
             },
-			{
-				"type": "constant",
-				"name": "SMOOTH_LIGHTING",
-				"displayName": "Smooth lighting",
-				"format": "bool",
-				"defaultValue": true,
-				"description": "Enables smooth lighting, akin to the similarly named option in the vanilla light system. Affects performance quite a bit, if you have trouble running the shader at acceptable framerates, try turning this off."
-			}
+            {
+                "type": "constant",
+                "name": "SMOOTH_LIGHTING",
+                "displayName": "Smooth lighting",
+                "format": "bool",
+                "defaultValue": true,
+                "description": "Enables smooth lighting, akin to the similarly named option in the vanilla light system. Affects performance quite a bit, if you have trouble running the shader at acceptable framerates, try turning this off."
+            },
+            {
+                "type": "constant",
+                "name": "BETTER_AO",
+                "displayName": "Better ambient occlusion",
+                "format": "bool",
+                "defaultValue": true,
+                "description": "Replaces default ambient occlusion (corners getting darker when they are covered from all sides) with a better version. Affects performance quite a bit."
+            },
         ]
     },
     {
