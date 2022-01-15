@@ -31,7 +31,7 @@
                 "displayName": "Better ambient occlusion",
                 "format": "bool",
                 "defaultValue": true,
-                "description": "Replaces default ambient occlusion (corners getting darker when they are covered from all sides) with a better version. Affects performance quite a bit."
+                "description": "Replaces default ambient occlusion (corners getting darker when they are covered from the sides) with a better version. Affects performance quite a bit."
             }
         ]
     },
