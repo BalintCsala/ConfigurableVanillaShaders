@@ -32,6 +32,15 @@
                 "format": "bool",
                 "defaultValue": true,
                 "description": "Replaces default ambient occlusion (corners getting darker when they are covered from the sides) with a better version. Affects performance quite a bit."
+            },
+            {
+                "type": "constant",
+                "name": "NORMAL_CALCULATION",
+                "displayName": "Normal calculation",
+                "format": "enum",
+                "enumValues": [{"name": "Fast", "value": 0}, {"name": "Fancy", "value": 1}],
+                "defaultValue": 1,
+                "description": "Defines how normals are calculated. Fast mode is considerably faster but it can introduce artifacts at the edges of blocks"
             }
         ]
     },
