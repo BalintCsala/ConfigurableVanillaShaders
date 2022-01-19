@@ -20,6 +20,19 @@ The main contributor(s) can decline a PR if it doesn't follow the standards:
 Go to the website and click on the wrench icon at the top, then confirm that you want to view developer mode. A new button will show up on the bottom right of the page 
 letting you upload shader.json files. Please test them before you open a PR.
 
+## External settings files
+
+If you want to keep your settings file in a separate settings.json file, you need to add the following object to the list in the json file in this repository:
+
+```json
+    {
+        "name": "<Name of the shader>",
+	"settingsLink": "<Link to your settings file. Must be a JSON file and must allow cross origin requests (e.g. raw links to files in github repos)>"
+    }
+```
+
+The contents are the same as what you'd have put in place of this object, so follow the steps below.
+
 ## Shaders.json format
 
 This documentation won't go over the JSON format, for that please refer to a [different site](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON).
