@@ -52,5 +52,9 @@
                 "description": "The amount the lamps sway from side to side. Larger values will result in larger offsets. Doesn't affect the speed."
             }
         ]
+    },
+    {
+        "settingsLink": "https://raw.githubusercontent.com/BalintCsala/ColoredEndPortals/main/settings.json",
+        "name": "Colored end portal"
     }
 ]
