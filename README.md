@@ -65,7 +65,7 @@ Each setting is a JSON object with the following properties:
                 "type": "<The type of the setting, (uniform | constant | define)>",
                 "name": "<Name of the setting, must match the name inside the pack>",
                 "displayName": "<Optional, what you want to display as the name of the setting>",
-                "format": "<The format of the setting, more below, (enum | float | vec2 | vec3 | vec4 | int | bool)>",
+                "format": "<The format of the setting, more below, (enum | float | vec2 | vec3 | vec4 | int | bool | color)>",
                 "defaultValue": "<The default value of the setting>",
                 "enumValues": "<Only for enums, see 'Enum'>",
                 "description": "<The description of the setting>",
@@ -143,6 +143,12 @@ The `defaultValue` field must be an array with as many entries as the dimensions
 Two additional options are available when defining an integer input `min` and `max`. These are done component-wise:
 - `min` controls the minimum value the output can reach. Must be a JSON array containing as many numbers as the vector has components.
 - `max` controls the maximum value the output can reach. Must be a JSON array containing as many numbers as the vector has components.
+
+#### Color
+
+The `defaultValue` field must be an array with 3 entries in a normalized (0-1) format.
+
+The variable must be declared as a vec3.
 
 #### Bool
 
