@@ -64,7 +64,7 @@
         "creatorLinK": "https://github.com/BalintCsala",
         "description": "Changes end portal particles to nyan cats",
         "thumbnail": "https://raw.githubusercontent.com/BalintCsala/Cat-portal/main/pack.png",
-        "settings": {
+        "settings": [
             {
                 "type": "constant",
                 "name": "NYAN_SPEED",
@@ -87,6 +87,6 @@
                 "step": 0.1,
                 "description": "The size of the cats."
             }
-        }
+        ]
     }
 ]
