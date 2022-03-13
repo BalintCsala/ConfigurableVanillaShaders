@@ -170,7 +170,7 @@ Example:
 "enumValues": [{"name": "A", "value": 0}, {"name": "B", "value": 1}, {"name": "C", "value": 2}],
 ```
 
-The shaders will get the value of the selected option as a float.
+The shaders will get the value of the selected option as an integer.
 
 ## Opening a PR
 
