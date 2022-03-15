@@ -4,22 +4,8 @@
         "name": "Minificent"
     },
     {
-        "url": "https://github.com/fayer3/minecraft-lower-clouds",
         "name": "Lower Clouds",
-        "creator": "fayer3",
-        "creatorLink": "https://github.com/fayer3",
-        "description": "Changes the cloud height, can be lowered or raised",
-        "thumbnail": "https://github.com/fayer3/minecraft-lower-clouds/raw/main/pack.png",
-        "settings": [
-            {
-                "type": "constant",
-                "name": "CLOUD_HEIGHT",
-                "displayName": "Cloud height",
-                "format": "float",
-                "defaultValue": 96.0,
-                "description": "The height at which the clouds will be, clouds will start 2 blocks below this value."
-            }
-        ]
+        "settingsLink": "https://raw.githubusercontent.com/fayer3/minecraft-lower-clouds/main/settings.json"
     },
     {
         "url": "https://github.com/BalintCsala/HangingLanterns",
