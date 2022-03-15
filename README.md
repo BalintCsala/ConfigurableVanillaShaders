@@ -51,7 +51,10 @@ The file is a JSON array containing the descriptions of the shaders. Each of tho
         "thumbnail": "<Optional, link to the image you want to be displayed next to the shader on the main page, preferably the pack.png>",
         "settings": [
             "<See: Settings>"
-        ]
+        ],
+	"stringReplace": [
+	    "<Optional, see: String replace>"	
+	]
     }
 ```
 (The default 4 space indent is intentional)
@@ -171,6 +174,100 @@ Example:
 ```
 
 The shaders will get the value of the selected option as an integer.
+
+## String replace
+
+This is an optional string editing tool to update some metadata. The format:
+
+```json
+            {
+                "regex": "<regex to look for>",
+                "with": "<format string to replace the matches with>",
+                "mapping": {
+                    "the mapping table is optional": {},    
+                    "<setting name>": {
+                        "<value 1>": "<mapped result 1>",
+                        "<value 2>": "<mapped result 2>"
+                    }
+                }
+            }
+```
+
+In short it gives you a way to replace some string specified with a regex with a dynamically interpreted format string. 
+
+> Examples for when to use and not to use string replace:
+>  - ✔️ DO: When you want to change the description of the shader based on some values
+>  - ✔️ DO: When you want to change the pack_version parameter based on a variable
+>  - ✔️ DO: When the name of a uniform changes in a json file (but not in the shader code)
+>  - ❌ DON'T: When you want to change what function gets called in the glsl code
+>  - ❌ DON'T: When you want to modify how the code behaves in any way
+
+The option deliberately doesn't work for shader files (.vsh/.fsh/.glsl) to discourage abuse. Use settings for those.
+
+### Example
+
+Let's say you created a setting to choose the version for backwards compatibility as an enum with the name `MINECRAFT_VERSION` and following values:
+
+ - 11700 for 1.17
+ - 11800 for 1.18
+ - 11801 for 1.18.1
+ - 11802 for 1.18.2
+
+If you want to update the version id in the pack.mcmeta file automatically based on the result you need the following settings:
+
+```json
+            {
+                "regex": "\"pack_version\": \\d+",
+                "with": "\"pack_version\": ${MINECRAFT_VERSION}",
+                "mapping": {
+                    "MINECRAFT_VERSION": {
+                        "11700": "7",
+                        "11800": "8",
+                        "11801": "8",
+                        "11802": "8"
+                    }
+                }
+            }
+```
+
+### Regex
+
+This is an ECMAScript flavour regex string. Since it has to be encoded as a string, every backslash must be escaped, so `\d` becomes `\\d`. 
+
+Groups are supported, more on that in "Format strings".
+
+To test a regex, use https://regex101.com/ and switch to the ecmascript flavour.
+
+### "with" format string
+
+When the editor finds a match for the regex, it will replace it with the provided format string (`"with"`), but first it formats it. There are two different supported options:
+
+$0, $1, $2 and so on get replaced with the different regex group results, $0 being the full result and $1, $2, $3 being the subgroups. For example running `(.)(\d)` on `A1, B2, C3, D4` will have the following results:
+
+ 1.  $0 = A1, $1 = A, $2 = 1
+ 2.  $0 = B2, $1 = B, $2 = 2
+ 3.  $0 = C3, $1 = C, $2 = 3
+ 4.  $0 = D4, $1 = D, $2 = 4
+
+The other option is `${<setting name>}` (this only let's you enter a single setting name unlike in bash and javascript where the syntax originates from). If you don't provide a mapping table, this will get replaced with raw value of the provided setting. For example in the `pack_version` example with 1.18.2 selected it would become
+```json
+"pack_version": 11802
+```
+
+### The mapping table
+
+This is an optional setting, it affects the `${}` format string option. When the editor tries to replace these, it first checks if a mapping option is present for the setting name and then it checks if the current value is inside this table or not. If either of these checks fail, the value will be replaced with the raw value of the string, otherwise it uses the provided alternative. For example if we provide the following mapping table:
+
+```json
+"mapping": {
+    "MINECRAFT_VERSION": {
+        "11700": "7",
+        "11800": "8"
+    }
+}
+```
+
+then if we select 1.17 as the current version, then the reference will be replaced with `7`, but if we select 1.18.1 or 1.18.2, since those don't exist in the table they will be replaced with `11801` and `11802` respectively.
 
 ## Opening a PR
 
