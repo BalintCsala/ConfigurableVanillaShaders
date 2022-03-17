@@ -1,0 +1,74 @@
+[
+    {
+        "name": "minimal",
+        "description": "Only affects the game minimally"
+    },
+    {
+        "name": "overhaul",
+        "description": "Significantly changes how the game looks"
+    },
+    {
+        "name": "meme",
+        "description": "Isn't intended to be used seriously"
+    },
+    {
+        "name": "ambience",
+        "description": "Adds small changes that make the game feel more realistic"
+    },
+    {
+        "name": "colorful",
+        "description": "Makes the game more colorful"
+    },
+    {
+        "name": "dark",
+        "description": "Makes the game darker"
+    },
+    {
+        "name": "gui",
+        "description": "Overhauls the GUI, might make it compatible with Optifine shaders"
+    },
+    {
+        "name": "free-for-all",
+        "description": "Shaders that are under permissive licences"
+    },
+    {
+        "name": "abuse",
+        "description": "Changes the core of the game in some way"
+    },
+    {
+        "name": "potato",
+        "description": "Has close to zero effect on the performance"
+    },
+    {
+        "name": "low-end",
+        "description": "Affects the performance, but not by much"
+    },
+    {
+        "name": "medium-end",
+        "description": "Causes a noticeable decrease in performance"
+    },
+    {
+        "name": "high-end",
+        "description": "Severely affects the performance"
+    },
+    {
+        "name": "1.17",
+        "description": "Compatible with 1.17"
+    },
+    {
+        "name": "1.18.0",
+        "description": "Compatible with 1.18.0"
+    },
+    {
+        "name": "1.18.1",
+        "description": "Compatible with 1.18.1"
+    },
+    {
+        "name": "1.18.2",
+        "description": "Compatible with 1.18.2"
+    },
+    {
+        "name": "nsfw",
+        "description": "This tag is a joke"
+    }
+]
