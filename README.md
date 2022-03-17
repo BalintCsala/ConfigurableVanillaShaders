@@ -282,6 +282,8 @@ Example:
 	"tags": ["minimal", "1.18.2", "colorful"]
 ```
 
+If you don't like the selection of the tags, the descriptions or just feel like something is missing, you can add your own, follow the instructions under "Opening a PR" for this.
+
 ## Opening a PR
 
 Fork the this repository first and edit the shaders.json file. Make sure to test it on the site (by enabling developer mode) first. If it doesn't work as intended, press 
