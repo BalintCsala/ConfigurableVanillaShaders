@@ -27,7 +27,8 @@ If you want to keep your settings file in a separate settings.json file, you nee
 ```json
     {
         "name": "<Name of the shader>",
-	"settingsLink": "<Link to your settings file. Must be a JSON file and must allow cross origin requests (e.g. raw links to files in github repos)>"
+	"settingsLink": "<Link to your settings file. Must be a JSON file and must allow cross origin requests (e.g. raw links to files in github repos)>",
+	"tags": "<Optional, see: Tags>"
     }
 ```
 
@@ -54,7 +55,8 @@ The file is a JSON array containing the descriptions of the shaders. Each of tho
         ],
 	"stringReplace": [
 	    "<Optional, see: String replace>"	
-	]
+	],
+	"tags": "<Optional, see: Tags>"
     }
 ```
 (The default 4 space indent is intentional)
@@ -268,6 +270,17 @@ This is an optional setting, it affects the `${}` format string option. When the
 ```
 
 then if we select 1.17 as the current version, then the reference will be replaced with `7`, but if we select 1.18.1 or 1.18.2, since those don't exist in the table they will be replaced with `11801` and `11802` respectively.
+
+## Tags
+
+To help differentiate your shaders from the rest, you can add tags to them. This will help properly filter them when searching for a specific category. 
+
+Tags are implemented as an array of strings, each entry should be one of the names from the "tags.json" file. Make sure the description of the tag applies to your shader before using one. When using an external reference (settingsLink), the tags have to be on the reference object (the one with the settingsLink property), this is for the future when we won't be able to load every shader and can only do so on a search.
+
+Example:
+```json
+	"tags": ["minimal", "1.18.2", "colorful"]
+```
 
 ## Opening a PR
 
