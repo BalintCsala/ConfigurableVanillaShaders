@@ -1,7 +1,8 @@
 [    
     {
         "settingsLink": "https://raw.githubusercontent.com/BalintCsala/Minificent/main/settings.json",
-        "name": "Minificent"
+        "name": "Minificent",
+        "tags": ["overhaul", "colorful", "1.18.1", "1.18.2", "medium-end"]
     },
     {
         "name": "Lower Clouds",
@@ -37,11 +38,13 @@
                 "step": 0.1,
                 "description": "The amount the lamps sway from side to side. Larger values will result in larger offsets. Doesn't affect the speed."
             }
-        ]
+        ],
+        "tags": ["minimal", "ambience", "potato"]
     },
     {
         "settingsLink": "https://raw.githubusercontent.com/BalintCsala/ColoredEndPortals/main/settings.json",
-        "name": "Colored end portal"
+        "name": "Colored end portal",
+        "tags": ["minimal", "potato", "colorful"]
     },
     {
         "url": "https://github.com/BalintCsala/Cat-portal",
@@ -73,6 +76,7 @@
                 "step": 0.1,
                 "description": "The size of the cats."
             }
-        ]
+        ],
+        "tags": ["minimal", "meme", "colorful"]
     }
 ]
