@@ -199,7 +199,7 @@ In short it gives you a way to replace some string specified with a regex with a
 
 > Examples for when to use and not to use string replace:
 >  - ✔️ DO: When you want to change the description of the shader based on some values
->  - ✔️ DO: When you want to change the pack_version parameter based on a variable
+>  - ✔️ DO: When you want to change the pack_format parameter based on a variable
 >  - ✔️ DO: When the name of a uniform changes in a json file (but not in the shader code)
 >  - ❌ DON'T: When you want to change what function gets called in the glsl code
 >  - ❌ DON'T: When you want to modify how the code behaves in any way
@@ -219,8 +219,8 @@ If you want to update the version id in the pack.mcmeta file automatically based
 
 ```json
             {
-                "regex": "\"pack_version\": \\d+",
-                "with": "\"pack_version\": ${MINECRAFT_VERSION}",
+                "regex": "\"pack_format\": \\d+",
+                "with": "\"pack_format\": ${MINECRAFT_VERSION}",
                 "mapping": {
                     "MINECRAFT_VERSION": {
                         "11700": "7",
@@ -253,7 +253,7 @@ $0, $1, $2 and so on get replaced with the different regex group results, $0 bei
 
 The other option is `${<setting name>}` (this only let's you enter a single setting name unlike in bash and javascript where the syntax originates from). If you don't provide a mapping table, this will get replaced with raw value of the provided setting. For example in the `pack_version` example with 1.18.2 selected it would become
 ```json
-"pack_version": 11802
+"pack_format": 11802
 ```
 
 ### The mapping table
