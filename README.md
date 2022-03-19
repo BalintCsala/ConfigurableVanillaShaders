@@ -56,7 +56,10 @@ The file is a JSON array containing the descriptions of the shaders. Each of tho
 	"stringReplace": [
 	    "<Optional, see: String replace>"	
 	],
-	"tags": "<Optional, see: Tags>"
+	"tags": "<Optional, see: Tags>",
+	"fileFilters": [
+		"<Optional, see: File filters>"
+	]
     }
 ```
 (The default 4 space indent is intentional)
@@ -283,6 +286,28 @@ Example:
 ```
 
 If you don't like the selection of the tags, the descriptions or just feel like something is missing, you can add your own, follow the instructions under "Opening a PR" for this.
+
+## File filters
+
+If you need to remove a whole file based on some setting, you can use file filters. These use the following format:
+
+```json
+{
+    "file": "<Path to the file>",
+    "condition": "<The condition of the file staying>"
+}
+```
+
+Condition is a booleann expression. The following operators are supported: `(, ), !, ==, !=, <, <=, >, >=, ||, &&`. On top of this you can use any setting you declared beforehand. 
+
+For example if you have a version selector and you want to use a file only if the version is 1.18.2, then you can do the following:
+
+```json
+{
+    "file": "myFile.glsl",
+    "condition": "MINECRAFT_VERSION == 11802"
+}
+```
 
 ## Opening a PR
 
